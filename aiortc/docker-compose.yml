@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        FOO: bar
+    volumes:
+     - ./:/opt
+    image: maxmcd/aiortc
+    depends_on: []
+    ports: []
+    environment:
+        - FOO=bar
